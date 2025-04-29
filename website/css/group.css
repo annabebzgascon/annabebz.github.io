@@ -1,0 +1,204 @@
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../font/merienda.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'MyCustomFont', sans-serif;
+    margin: 0;
+    background: #9e2a30da;
+    padding: 0;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background: #5C4033;
+    height: 60px;
+    padding: 0 20px;
+  }
+  
+  .logo-nav {
+    height: 50px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  nav a {
+    color: white;
+    font-family: 'MyCustomFont', Times, serif;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+  }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .carousel h1, .carousel p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+      z-index: 10;
+    }
+
+    .carousel h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .carousel p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .region-section {
+        padding: 3rem 1rem;
+        background-color: #f4f4f9;
+        text-align: center;
+      }
+      
+      .region-section h2 {
+        font-size: 2.5rem;
+        color: #0044cc;
+        margin-bottom: 1rem;
+      }
+      
+      .tribe-table {
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 20px;
+      }
+      
+      .tribe-table td {
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.3s;
+      }
+      
+      .tribe-table td:hover {
+        transform: translateY(-5px);
+      }
+      
+      .tribe-card {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+      }
+      
+      .tribe-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      
+      .tribe-card h3 {
+        margin-top: 10px;
+        color: #333;
+      }
+      
+      .tribe-description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.7);
+        color: #fff;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        transition: opacity 0.3s;
+        border-radius: 8px;
+      }
+      
+      .tribe-card:hover .tribe-description {
+        opacity: 1;
+      }
+      
+
+  
+    @media screen and (max-width: 768px) {
+      .carousel h1 {
+        font-size: 1.8rem;
+      }
+
+      .carousel p {
+        font-size: 1rem;
+      }
+
+      .card-column {
+        padding: 10px;
+      }
+
+      .card {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .card img {
+        height: 180px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .carousel h1 {
+        font-size: 1.5rem;
+      }
+
+      .carousel p {
+        font-size: 0.9rem;
+      }
+
+      .card {
+        width: 95%;
+        padding: 10px;
+      }
+
+      .card img {
+        height: 160px;
+      }
+    }
