@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('../font/merienda.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'MyCustomFont', sans-serif;
+    background: #080808;
+    color: rgba(0, 0, 0, 0);
+  }
+  
+
+  nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background: #5C4033;
+    height: 60px;
+    padding: 0 20px;
+  }
+  
+  .logo-nav {
+    height: 50px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  nav a {
+    color: white;
+    font-family: 'MyCustomFont', Times, serif;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+  }
+ 
+  header {
+    background: 
+  linear-gradient(rgba(124, 79, 61, 0.5), rgba(133, 95, 59, 0.5)),
+  url('../css/bck.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .introduction {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .introduction h2 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .introduction p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  
+  .culture-treasure {
+    padding: 3rem 1rem;
+    background-color: #e9f7ff;
+    text-align: center;
+  }
+  
+  .culture-treasure h2 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .culture-treasure p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background: #f4f4f4;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+  }
+  
+  .card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card button:hover {
+    background: #0056b3;
+  }
+  
+  footer.footer {
+    background-color: #5C4033;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    text-align: center;
+  }
+  
+  footer .logo {
+    margin-right: 20px; }
+  
+  footer .logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  footer .text {
+    font-size: 1rem;
+    max-width: 60%; 
+    margin: 0 auto; 
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .cards {
+      padding: 20px;
+    }
+  
+    .card img {
+      height: 150px;
+    }
+  
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    nav a {
+      font-size: 0.85rem;
+    }
+  }
+  

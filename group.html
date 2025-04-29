@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for responsiveness -->
+  <title>Group Page</title>
+  <link rel="stylesheet" href="css/group.css">
+</head>
+<body>
+
+  <nav>
+    <img src="asset/logo.png" class="logo-nav" alt="Logo">
+    <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="group.html">Group</a>
+    </div>
+  </nav>
+
+  <div class="carousel" id="carousel">
+    <h1>Group of Indigenous Peoples in the Philippines</h1>
+    
+    <img src="asset/Ifugao Women.jpeg" class="active" alt="Group 1">
+    <img src="asset/Lumad.jpeg" alt="Group 2">
+    <img src="asset/kid.jpeg" alt="Group 3">
+  </div>
+
+
+<section class="region-section" id="luzon" style="background: #9e2a30da;">
+  <h2>Luzon</h2>
+  <table class="tribe-table">
+    <tr>
+      <td onclick="location.href='luzon-igorot.html'">
+        <div class="tribe-card">
+          <img src="asset/igorot.jpg" alt="Igorot">
+          <h3>Igorot</h3>
+          <div class="tribe-description">Known for the famous Banaue Rice Terraces and mountain rituals.</div>
+        </div>
+      </td>
+      <td onclick="location.href='luzon-aeta.html'">
+        <div class="tribe-card">
+          <img src="asset/aeta.jpg" alt="Aeta">
+          <h3>Aeta</h3>
+          <div class="tribe-description">One of the earliest inhabitants of the Philippines with distinct traditions.</div>
+        </div>
+      </td>
+      <td onclick="location.href='luzon-aeta.html'">
+        <div class="tribe-card">
+          <img src="asset/ifugao.jpg" alt="Ifugao">
+          <h3>Ifugao</h3>
+          <div class="tribe-description">One of the earliest inhabitants of the Philippines with distinct traditions.</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td onclick="location.href='luzon-aeta.html'">
+        <div class="tribe-card">
+          <img src="asset/mangyan.jpg" alt="bontoc">
+          <h3>Mangyan</h3>
+          <div class="tribe-description">One of the earliest inhabitants of the Philippines with distinct traditions.</div>
+        </div>
+      </td>
+      <td onclick="location.href='luzon-aeta.html'">
+        <div class="tribe-card">
+          <img src="asset/tagbanua.jpg" alt="Tagbanua">
+          <h3>Tagbanua</h3>
+          <div class="tribe-description">One of the earliest inhabitants of the Philippines with distinct traditions.</div>
+        </div>
+      </td>
+      <td onclick="location.href='luzon-aeta.html'">
+        <div class="tribe-card">
+          <img src="asset/bicol.jpg" alt="Bicol">
+          <h3>Bicol</h3>
+          <div class="tribe-description">One of the earliest inhabitants of the Philippines with distinct traditions.</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+<section class="region-section" id="visayas">
+  <h2>Visayas</h2>
+  <table class="tribe-table">
+    <tr>
+      <td onclick="location.href='visayas-ati.html'">
+        <div class="tribe-card">
+          <img src="asset/ati.jpg" alt="Ati">
+          <h3>Ati</h3>
+          <div class="tribe-description">Famous for their role in the Ati-Atihan Festival and ancient culture.</div>
+        </div>
+      </td>
+      <td onclick="location.href='visayas-tumandok.html'">
+        <div class="tribe-card">
+          <img src="asset/tumandok.jpg" alt="Tumandok">
+          <h3>Tumandok</h3>
+          <div class="tribe-description">Keepers of Panay's oral traditions and natural healing practices.</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+<section class="region-section" id="mindanao">
+  <h2>Mindanao</h2>
+  <table class="tribe-table">
+    <tr>
+      <td onclick="location.href='mindanao-lumad.html'">
+        <div class="tribe-card">
+          <img src="asset/lumad.jpg" alt="Lumad">
+          <h3>Lumad</h3>
+          <div class="tribe-description">Umbrella term for non-Muslim indigenous groups in Mindanao.</div>
+        </div>
+      </td>
+      <td onclick="location.href='mindanao-manobo.html'">
+        <div class="tribe-card">
+          <img src="asset/manobo.jpg" alt="Manobo">
+          <h3>Manobo</h3>
+          <div class="tribe-description">Known for colorful textiles, dances, and strong kinship culture.</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+
+  <script>
+
+    const images = document.querySelectorAll('#carousel img');
+    let index = 0;
+
+    setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
