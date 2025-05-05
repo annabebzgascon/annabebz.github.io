@@ -92,8 +92,9 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  background-color: #9e2a30da; 
+  background: linear-gradient(135deg, #f8efc0, #5C4033);  
 }
+  
 
 .intro-text {
   flex: 1;
@@ -128,8 +129,9 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  background-color: #FFFFFF;
+  background: linear-gradient(135deg, #f8efc0, #5C4033);  
 }
+  
 
 .about-image {
   flex: 1;
@@ -184,17 +186,14 @@ header h1 {
   background-color: #3e2a1d;
 }
 
-
-
-
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 40px;
-  background: #9e2a30da;
-}
+  background: linear-gradient(135deg, #f8efc0, #5C4033); 
+ }
+  
 
 .card {
   background: white;
@@ -309,33 +308,45 @@ footer .social-media a:hover {
   transform: scale(1.1); }
 
 
-@media (max-width: 768px) {
-  footer.footer {
-    flex-direction: column; 
+
+@media (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    transform: none;
+    position: static;
+    align-items: center;
+  }
+
+  .dropdown select {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .intro, .about {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .intro-text, .about-text, .intro-image, .about-image {
+    padding: 0;
+    width: 100%;
     text-align: center;
   }
 
-  footer .logo img {
-    max-width: 100px;
-  }
-
-  footer .text {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-  }
-
-  footer .social-media {
-    gap: 10px;
-  }
-
-  footer .social-media a {
-    font-size: 1rem;
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
   .cards {
+    grid-template-columns: 1fr;
     padding: 20px;
   }
 
@@ -343,11 +354,54 @@ footer .social-media a:hover {
     height: 150px;
   }
 
-  header h1 {
-    font-size: 2.5rem;
+  .auth-container {
+    margin: 50px 20px;
   }
 
-  nav a {
-    font-size: 0.85rem;
+  footer.footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  footer .logo {
+    margin-bottom: 15px;
+  }
+
+  footer .text {
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 }
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    margin: 5px;
+  }
+
+  .intro-text h1,
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .footer .social-media {
+    gap: 10px;
+  }
+}
+
+  
